@@ -59,7 +59,7 @@
     </form>
     <hr>
     <a th:href="@{/insertBoardView}">글등록</a>
-    <a th:href="@{/deleteBoard(seq=${board.seq})}">글삭제</a>
+    <a th:if="${session['member'].role == 'ROLE_ADMIN'}" th:href="@{/deleteBoard(seq=${board.seq})}">글삭제</a>
     <a th:href="@{/getBoardList}">글목록</a>
 </div>
 </body>

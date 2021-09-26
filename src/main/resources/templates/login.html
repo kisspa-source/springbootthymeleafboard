@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>게시판 목록</title>
+    <style>
+        table {
+            width: 100%;
+            border: 1px solid #444444;
+            border-collapse: collapse;
+        }
+        table th {
+            border: 1px solid #444444;
+            text-align: center;
+            height: 40px;
+            background-color: dodgerblue;
+            color: cornsilk;
+        }
+        table td {
+            border: 1px solid #444444;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div style="text-align: center;">
+    <h1>로그인</h1>
+    <form th:action="login" method="post">
+        <table style="width: 300px; margin: auto">
+            <tr>
+                <td th:text="아이디"></td>
+                <td><input name="id" type="text" size="10"></td>
+            </tr>
+            <tr>
+                <td th:text="패스워드"></td>
+                <td><input name="password" type="password" size="10"></td>
+            </tr>
+            <tr>
+                <td th:colspan="2"><input type="submit" value="Login"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

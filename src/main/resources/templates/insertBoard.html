@@ -33,7 +33,7 @@
         </tr>
         <tr>
             <td style="background-color: dodgerblue; color: cornsilk">작성자</td>
-            <td><input type="text" name="writer"/></td>
+            <td><input th:value="${session['member'].name}" type="text" name="writer"/></td>
         </tr>
         <tr>
             <td style="background-color: dodgerblue; color: cornsilk">내용</td>
